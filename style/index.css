@@ -1,0 +1,149 @@
+body {
+    background: rgb(197, 228, 231);
+    background: linear-gradient(90deg, rgba(197, 228, 231, 1) 0%, rgba(153, 202, 255, 1) 100%);
+}
+
+.title-calculator {
+    display: block;
+    margin: 40px auto;
+}
+
+.container-calculator {
+    margin: 0 auto;
+    max-width: 375px;
+    height: fit-content;
+    display: grid;
+    background-color: white;
+    border-radius: 0.6em 0.6em 0 0;
+}
+
+.wrapper-operation {
+    display: grid;
+    gap: 0.8em;
+    margin: 0.9em;
+}
+
+.bill-calculator {
+    display: grid;
+    gap: 0.3em;
+}
+
+.bill-calculator input,
+.wrapper-operation input {
+    all: unset;
+    padding: 0.4em;
+    background: #e7f3f3;
+    text-align: right;
+}
+
+.bill,
+.number-person {
+    position: relative;
+}
+
+.tip-calculator {
+    display: grid;
+    gap: 0.2em;
+}
+
+.tip-calculator div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6em;
+}
+
+.tip-calculator div>input {
+    width: 100%;
+    background: #043939;
+    color: white;
+    text-align: center;
+    padding: 0.4em 0;
+    border-radius: 0.3em;
+    font-size: 20px;
+}
+
+.custom {
+    width: 100%;
+    background: #d6f5f5 !important;
+    color: rgb(71, 69, 69) !important;
+    text-align: center;
+    padding: 0.4em 0;
+    border-radius: 0.3em;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: rgb(71, 69, 69);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+
+.tip-calculator div>input:hover {
+    background: #79f3f3;
+    color: black;
+    transition: background 0.5s ease-in-out;
+}
+
+.people-calculator {
+    display: grid;
+    gap: 0.5em;
+}
+
+.dollar,
+.people {
+    position: absolute;
+    translate: 0.4em 2.0em;
+}
+
+.wrapper-result {
+    display: grid;
+    margin: 0.9em;
+    padding: 0.9em;
+    border-radius: 1em;
+    background: #04393d;
+    color: white;
+}
+
+.calculator-amount,
+.calculator-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-tip,
+.label-total {
+    width: 30px;
+    word-break: keep-all;
+}
+
+button {
+    all: unset;
+    background-color: #11abb6;
+    text-align: center;
+    padding: 0.7em;
+    border-radius: 0.4em;
+}
+
+@media (min-width: 768px) {
+    .container-calculator {
+        max-width: 768px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.8em;
+        border-radius: 0.6em;
+    }
+
+    .title-calculator {
+        margin: 4em auto;
+    }
+
+    .tip-calculator div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    button {
+        padding: 0;
+    }
+}
